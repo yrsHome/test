@@ -1,0 +1,7 @@
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\bin\Debug\Query.dll
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\bin\Debug\Query.pdb
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\bin\Debug\IBatisNet.Common.dll
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\bin\Debug\IBatisNet.DataMapper.dll
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\obj\Debug\Query.dll
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\obj\Debug\Query.pdb
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Query\obj\Debug\Query.csprojResolveAssemblyReference.cache

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="POP.Repositories.IBatis" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  >
+  <resultMaps>
+    <resultMap id="" class="MvcMusicStore.Query.AlbumDTO">
+      <result property="AlbumId" column="ALBUMID"/>
+      <result property="GenreId" column="GENREID"/>
+      <result property="ArtistID" column="ARTISTID"/>
+      <result property="Title" column="TITLE"/>
+      <result property="Price" column="PRICE"/>
+      <result property="AlbumArtual" column="ALBUMARTURL"/>
+    </resultMap>
+
+    <resultMap id="" class="MvcMusicStore.Query.ArtistDTO">
+      <result property="ArtistId" column="ARTISTID"/>
+      <result property="Name" column="NAME"/>
+    </resultMap>
+
+    <resultMap id="" class="MvcMusicStore.Query.CartDTO">
+      <result property="RecordId" column="RECORDFID"/>
+      <result property="CardId" column="CARDID"/>
+      <result property="AlbumId" column="ALBUMID"/>
+      <result property="Count" column="COUNT"/>
+      <result property="DateCreated" column="DATECREATED"/>
+    </resultMap>
+
+    <resultMap id="" class="MvcMusicStore.Query.GenresDTO">
+      <result property="GenreId" column="GENREID"/>
+      <result property="Name" column="NAME"/>
+      <result property="AlbumId" column="ALBUMID"/>
+    </resultMap>
+
+    <resultMap id="" class="MvcMusicStore.Query.OrderDetailDTO">
+      <result property="OrderDetailId" column="ORDERDETAILID"/>
+      <result property="OrderId" column="ORDERID"/>
+      <result property="AlbumId" column="ALBUMID"/>
+      <result property="Quantity" column="QUANTITY"/>
+      <result property="UnitPrice" column="UNITPRICE"/>
+    </resultMap>
+
+    <resultMap id="" class="MvcMusicStore.Query.OrdersDTO">
+      <result property="OrderId" column="ORDERID"/>
+      <result property="OrderDate" column="ORDERDATE"/>
+      <result property="UserName" column="USERNAME"/>
+      <result property="FirstName" column="FIRSTNAME"/>
+      <result property="LastName" column="LASTNAME"/>
+      <result property="Address" column="ADDRESS"/>
+      <result property="City" column="CITY"/>
+      <result property="State" column="STATE"/>
+      <result property="PostalCode" column="POSTALCODE"/>
+      <result property="Country" column="COUNTRY"/>
+      <result property="Phone" column="PHONE"/>
+      <result property="Email" column="EMAIL"/>
+      <result property="Total" column="TOTAL"/>
+    </resultMap>
+  </resultMaps>
+  <statements>
+    <insert id="InsertList" parameterClass="java.util.List">
+      <selectKey property="ALBUMID" type="pre" resultClass="long">
+        SELECT SQ_ALBUM.NEXTVAL FROM SYS.DUAL
+      </selectKey>
+      insert into ALBUM
+      (ALBUMID, GENREID, ARTISTID, TITLE, PRICE, ALBUMARTURL)
+      values
+      <iterate conjunction="," open="" close="" property="AlbumsList">
+        <![CDATA[ 
+            (#AlbumsList[]#) 
+        ]]>
+      </iterate>
+    </insert>
+  </statements>
+</sqlMap>

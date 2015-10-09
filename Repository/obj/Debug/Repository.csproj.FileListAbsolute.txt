@@ -1,0 +1,5 @@
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Repository\bin\Debug\Repository.dll
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Repository\bin\Debug\Repository.pdb
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Repository\obj\Debug\Repository.dll
+F:\ru.yangWork\TestPro\MvcMusicStore2.0\Repository\obj\Debug\Repository.pdb

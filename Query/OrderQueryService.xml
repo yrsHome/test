@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MvcMusicStore.MvcMusicStore.IBatis" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  >
+  <statements>
+    <select id="OrderList" resultClass="MvcMusicStore.Query.OrderQueryDataObject" >
+      SELECT      
+      PKID "OrderID",
+      B1_TOTAL_AMOUNT "Amount",
+      ORDER_TOTAL_PIECES "Pieces",
+      ORDER_TOTAL_WEIGHT "Weight",
+      PAYMENT_STATUS "PaymentStatus",
+      ORDER_CODE "Code",
+      UNIQUE_ID "UniqueID",
+      ORDER_STATUS "Status",
+      ORDER_TIME "OrderTime"
+      FROM TORDER
+      WHERE TORDER.VALID='T' AND IS_IMPORT_FROM_ERP=0
+    </select>
+  </statements>
+</sqlMap>
+
+
